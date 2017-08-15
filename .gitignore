@@ -1,0 +1,15 @@
+hooks
+node_modules
+platforms
+plugins
+resources
+www
+.idea
+.tmp
+.sass-cache
+<%= appPath %>/bower_components
+coverage
+*.swp
+*.swo
+*.log
+*.DS_Store
