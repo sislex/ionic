@@ -1,0 +1,26 @@
+page-about {
+  #map {
+    height: 300px;
+  }
+
+  .card-wrapper{
+    margin: 0 -16px;
+  }
+
+  form{
+    .item{
+      border-bottom: 1px solid #ddd;
+      padding-left: 0;
+    }
+
+    textarea{
+      height: 50px;
+    }
+
+    button.button-md{
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+}

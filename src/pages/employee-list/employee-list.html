@@ -16,52 +16,18 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-list *ngFor="let office of offices">
     <ion-list-header>
-      Sun Francisco
+      {{office.city}}
     </ion-list-header>
 
-    <ion-item (click)="goToOtherPage()" menuToggle="right" inset="">
+    <ion-item (click)="goToOtherPage(employee)" menuToggle="right" inset="" *ngFor="let employee of office.employees">
       <ion-avatar item-start>
-        <img src="assets/avatars/1.png">
+        <img src="assets/avatars/{{employee.image}}">
       </ion-avatar>
-      <h2>Finn</h2>
+      <h2>{{employee.firstName}} {{employee.lastName}}</h2>
       <h3>I'm a big deal</h3>
       <p>Listen, I've had a pretty messed up day...</p>
     </ion-item>
   </ion-list>
-
-  <ion-list>
-    <ion-list-header>
-      Minsk
-    </ion-list-header>
-
-    <ion-item (click)="goToOtherPage()">
-      <ion-avatar item-start>
-        <img src="assets/avatars/1.png">
-      </ion-avatar>
-      <h2>Poe</h2>
-      <h3>New Ride</h3>
-      <p>I just upgraded my X-Wing. Next time...</p>
-    </ion-item>
-
-    <ion-item (click)="goToOtherPage()">
-      <ion-avatar item-start>
-        <img src="assets/avatars/1.png">
-      </ion-avatar>
-      <h2>Ben</h2>
-      <h3>Move Along</h3>
-      <p>These aren't the droids you're looking for...</p>
-    </ion-item>
-
-    <ion-item (click)="goToOtherPage()">
-      <ion-avatar item-start>
-        <img src="assets/avatars/1.png">
-      </ion-avatar>
-      <h2>Leia</h2>
-      <h3>You're My Only Hope</h3>
-      <p>I've placed information vital to the survival...</p>
-    </ion-item>
-  </ion-list>
-
 </ion-content>

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>employee-details</ion-title>
+    <ion-title>{{emploee.firstName}} {{emploee.lastName}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,63 +16,22 @@
 <ion-content>
   <ion-card>
 
-    <img src="assets/avatars/1.png"/>
+    <img src="assets/avatars/{{emploee.image}}"/>
 
     <ion-card-content>
       <ion-card-title>
-        Marty
+        Position: {{emploee.position}}
       </ion-card-title>
       <p>
-        Marty first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
+        {{emploee.firstName}} first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
       </p>
     </ion-card-content>
 
-    <ion-item>
-      <ion-icon name='ios-nuclear' item-start style="color: blue"></ion-icon>
-      PHP
+    <ion-item *ngFor="let technology of emploee.technologies">
+      <ion-icon name='{{technology.ico}}' item-start [ngStyle]="{'color': technology.color}"></ion-icon>
+      {{technology.name}}
       <div item-end>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star-outline" style="color: orange"></ion-icon>
-        <ion-icon name="star-outline" style="color: orange"></ion-icon>
-      </div>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name='ios-pulse' item-start style="color: orange"></ion-icon>
-      JavaScript
-      <div item-end>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star-outline" style="color: orange"></ion-icon>
-        <ion-icon name="star-outline" style="color: orange"></ion-icon>
-      </div>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name='logo-angular' item-start style="color: red"></ion-icon>
-      Angular 4
-
-      <div item-end>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star-outline" style="color: orange"></ion-icon>
-      </div>
-    </ion-item>
-    <ion-item>
-      <ion-icon name='logo-html5' item-start style="color: orange"></ion-icon>
-      HTML 5
-
-      <div item-end>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
-        <ion-icon name="star" style="color: orange"></ion-icon>
+        {{technology.experience}}
       </div>
     </ion-item>
 

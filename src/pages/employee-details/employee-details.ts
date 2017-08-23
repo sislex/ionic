@@ -14,11 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'employee-details.html',
 })
 export class EmployeeDetailsPage {
+  public emploee:{} = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.emploee = navParams.data;
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(office) {
     console.log('ionViewDidLoad EmployeeDetailsPage');
   }
 

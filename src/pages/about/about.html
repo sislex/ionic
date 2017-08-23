@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contacts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="card-wrapper">
+    <ion-card>
+
+      <ion-card-content>
+        <form [formGroup]="todo" (ngSubmit)="logForm()">
+          <ion-item>
+            <ion-input type="text" formControlName="title" placeholder="Name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="text" formControlName="email" placeholder="Email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-textarea formControlName="description" placeholder="Message"></ion-textarea>
+          </ion-item>
+
+          <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+        </form>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <h2>Our Location</h2>
+        <p>Adress: New York 23066 / Pacific Street / Brooklyn </p>
+
+      </ion-item>
+
+      <div #map id="map"></div>
+
+      <ion-card-content>
+        <p>Email: email@yourwebsite.com </p>
+        <p>Mobile: +900 456 567 77 </p>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+</ion-content>

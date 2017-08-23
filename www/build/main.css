@@ -25198,3 +25198,90 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+.wrapper {
+  padding-top: 30px;
+  position: relative;
+  height: 100%;
+  contain: strict;
+}
+
+ion-fab {
+  top: 0 !important;
+}
+
+page-about #map {
+  height: 300px;
+}
+
+page-about .card-wrapper {
+  margin: 0 -16px;
+}
+
+page-about form .item {
+  border-bottom: 1px solid #ddd;
+  padding-left: 0;
+}
+
+page-about form textarea {
+  height: 50px;
+}
+
+page-about form button.button-md {
+  margin-top: 20px;
+  width: 100%;
+}
+
+page-employee-details [item-end] {
+  color: gray;
+}
+
+page-home ion-slides {
+  height: 300px;
+  color: #ffffff;
+}
+
+page-home ion-slides ion-slide {
+  height: 100%;
+  background: #000;
+}
+
+page-home ion-slides ion-slide .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+page-home ion-slides ion-slide .message {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+page-home .image-wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-home .image-wrapper ion-icon {
+  display: block;
+  margin: auto;
+  font-size: 50px;
+}
+
+page-home .card-wrapper {
+  margin: 0 -25px;
+}
+
+page-home #map {
+  height: 30%;
+}
