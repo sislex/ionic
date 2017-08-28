@@ -23,9 +23,9 @@ export class ScopeProvider {
       {name: 'Mobile App Dev', text: 'iOS, Android', ico: 'md-phone-portrait', color: "#555"},
   ];
 
-  public offices: [{}] = [
+  public offices: [{city: string, employees: [{}]}] = [
       {
-        city: 'Sun Francisco',
+        city: 'San Francisco',
         employees: [
           {
             firstName: 'Vitaly',
